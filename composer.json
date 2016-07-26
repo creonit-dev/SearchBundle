@@ -12,5 +12,8 @@
     "psr-4": {
       "Creonit\\SearchBundle\\": ""
     }
+  },
+  "require": {
+	"foolz/sphinxql-query-builder" : "1.0.4"
   }
 }
