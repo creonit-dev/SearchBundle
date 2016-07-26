@@ -1,0 +1,25 @@
+services:
+    creonit_search:
+        class: Creonit\SearchBundle\CreonitSearch
+        calls: [ ['setContainer', ['@service_container']] ]
+
+    creonit_search.admin_module:
+        class: Creonit\SearchBundle\Admin\SearchModule
+        tags: [{name: creonit_admin.module}]
+
+    sphinx.query:
+        class: Foolz\SphinxQL\SphinxQL
+        factory: [Foolz\SphinxQL\SphinxQL, create]
+        arguments: ['@sphinx.connection']
+        shared: false
+
+    sphinx.helper:
+        class: Foolz\SphinxQL\Helper
+        factory: [Foolz\SphinxQL\Helper, create]
+        arguments: ['@sphinx.connection']
+        shared: false
+
+    sphinx.connection:
+        class: Foolz\SphinxQL\Drivers\Pdo\Connection
+        calls:
+            - [setParams, [{host: '%creonit_search.sphinx.host%', port: '%creonit_search.sphinx.port%'}]]

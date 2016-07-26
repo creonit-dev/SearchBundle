@@ -1,0 +1,16 @@
+{
+  "name": "creonit/search-bundle",
+  "keywords": [
+    "creonit",
+    "symfony",
+    "bundle",
+    "search",
+    "sphinx"
+  ],
+  "license": "GNU GPLv3",
+  "autoload": {
+    "psr-4": {
+      "Creonit\\SearchBundle\\": ""
+    }
+  }
+}
