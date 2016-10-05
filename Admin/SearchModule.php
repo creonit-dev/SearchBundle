@@ -12,6 +12,7 @@ class SearchModule extends Module
             ->setTitle('Поиск')
             ->setIcon('search')
             ->setTemplate('QueryTable')
+            ->setPermission('ROLE_ADMIN_SEARCH')
         ;
     }
 
