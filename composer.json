@@ -15,6 +15,6 @@
   },
   "require": {
     "foolz/sphinxql-query-builder" : "^1.0.4",
-    "creonit/propel-schema-converter-bundle": "^0.1.0"
+    "creonit/propel-schema-converter-bundle": "^0.1.0|^0.2.0"
   }
 }
