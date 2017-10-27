@@ -96,14 +96,11 @@ class CreonitSearchIndex
                     source = {$this->getName()}
                     path   = {$indexDir}/{$this->getName()}
                     morphology      = stem_en, stem_ru
-                    
                     wordforms = {$dir}/wordforms.txt
-                    
+                    blend_chars = U+2d
                     html_strip = 1
-                    
                     min_word_len = 3
                     min_infix_len = 3
-                   
                     expand_keywords = 1
                     index_exact_words = 1
                 }
