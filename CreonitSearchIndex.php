@@ -124,7 +124,11 @@ class CreonitSearchIndex
     public function retrieveEntities($ids)
     {
         $query = $this->configuration['entity'] . 'Query';
-        return (new $query)->filterById($ids);
+        return (new $query)->filterById($ids)
+            ->withColumn("FIELD(id, " . implode(', ', $ids) . ")", 'relevance')
+            ->orderBy('relevance')
+            ->find()
+            ->getData();
     }
 
 }

@@ -7,7 +7,7 @@
     "search",
     "sphinx"
   ],
-  "license": "GNU GPLv3",
+  "license": "GPL-3.0-only",
   "autoload": {
     "psr-4": {
       "Creonit\\SearchBundle\\": ""
