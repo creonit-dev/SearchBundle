@@ -46,7 +46,7 @@ class CreonitSearch
         $this->indexes[$index->getName()] = $index;
     }
 
-    protected function build(){
+    public function build(){
         if(!is_dir($this->sphinxIndexDir)){
             @mkdir($this->sphinxIndexDir, 0777, true);
         }
